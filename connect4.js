@@ -15,6 +15,12 @@ class Connect4 {
       //for each row, create new div
       const $row = $('<div>')
         .addClass('row');
+      //create for loop for columns within the rows
+      for (let col = 0; col < this.COLS; col++) {
+        const $col = $('<div>')
+          .addClass('col empty'); //give class empty for styling purposes
+        $row.append($col);
+      }
       $board.append($row);
     }
   }
